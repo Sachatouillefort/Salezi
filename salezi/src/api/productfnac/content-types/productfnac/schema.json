@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "productfnacs",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product",
+    "singularName": "productfnac",
+    "pluralName": "productfnacs",
+    "displayName": "Product Fnac",
     "description": ""
   },
   "options": {
