@@ -50,6 +50,10 @@ Make sure you have installed the following prerequisites before starting:
 
 Access Grafana and open the Strapi dashboard to visualize metrics and statistics from your Strapi application.
 
+## Api Documentation
+
+You can use the documentation : http://localhost:1337/documentation/v1.0.0#/
+
 ## Postman Collection
    - Use the Postman collection provided in the `postman-collection` directory to test different routes of your Strapi application.
 
