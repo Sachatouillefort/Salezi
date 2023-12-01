@@ -51,6 +51,10 @@ Assurez-vous d'avoir installé les prérequis suivants avant de commencer :
 
 Accédez à Grafana et ouvrez le tableau de bord Strapi pour visualiser les métriques et les statistiques de votre application Strapi.
 
+## Postman
+
+Utilisez la collection Postman fournie dans le répertoire postman-collection pour tester les différentes routes de votre application Strapi.
+
 ## Contributions
 
 Les contributions sont les bienvenues ! Si vous trouvez des problèmes ou souhaitez améliorer cette intégration, n'hésitez pas à ouvrir une issue ou à soumettre une demande de fusion.
