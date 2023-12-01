@@ -1,4 +1,4 @@
-# Intégration de Strapi avec Grafana Dashboard
+## Intégration de Strapi avec Grafana Dashboard
  
 Ce projet démontre comment intégrer Strapi, un CMS headless open-source, avec Grafana, une plateforme d'analyse et de surveillance. En combinant ces deux outils puissants, vous pouvez visualiser et analyser les données de votre application Strapi de manière efficace.
  
