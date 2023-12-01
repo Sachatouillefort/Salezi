@@ -11,20 +11,14 @@ Assurez-vous d'avoir installé les prérequis suivants avant de commencer :
 
 ## Installation
 
-1. **Strapi Setup**
-   - Installez Strapi en suivant les instructions de [documentation officielle](https://strapi.io/documentation/getting-started/installation).
-   - Configurez et lancez votre application Strapi.
+1. **Clone Repository**
 
    ```bash
-   # Installation de Strapi
-   npm install -g create-strapi-app
-   create-strapi-app my-strapi-app
-   cd my-strapi-app
+    git clone git@github.com:Sachatouillefort/Salezi.git
    ```
 
    ```bash
-   # Lancement de Strapi en mode développement
-   npm run develop
+    npm run develop
    ```
 
 2. **Grafana Setup**
