@@ -1,66 +1,63 @@
-# Intégration de Strapi avec Grafana Dashboard
+Integration of Strapi with Grafana Dashboard
 
-Ce projet démontre comment intégrer Strapi, un CMS headless open-source, avec Grafana, une plateforme d'analyse et de surveillance. En combinant ces deux outils puissants, vous pouvez visualiser et analyser les données de votre application Strapi de manière efficace.
+This project demonstrates how to integrate Strapi, an open-source headless CMS, with Grafana, an analytics and monitoring platform. By combining these two powerful tools, you can efficiently visualize and analyze data from your Strapi application.
 
-## Configuration requise
+**Prerequisites**
+Make sure you have installed the following prerequisites before getting started:
 
-Assurez-vous d'avoir installé les prérequis suivants avant de commencer :
+- Strapi - A Node.js-based headless CMS.
+- Grafana - An analytics and monitoring platform.
 
-- [Strapi](https://strapi.io/) - Un CMS headless basé sur Node.js
-- [Grafana](https://grafana.com/) - Une plateforme d'analyse et de surveillance
+**Installation**
+1. Clone Repository
 
-## Installation
-
-1. **Clone Repository**
-
-   ```bash
+    ```bash
     git clone git@github.com:Sachatouillefort/Salezi.git
-   ```
-
-   ```bash
     npm run develop
-   ```
+    ```
 
-2. **Grafana Setup**
-   - Installez Grafana en suivant les instructions de [documentation officielle](https://grafana.com/docs/grafana/latest/installation/).
-   - Configurez Grafana et assurez-vous qu'il est en cours d'exécution.
+2. Grafana Setup
 
-   ```bash
-   # Lancement de Grafana
-   sudo service grafana-server start
-   ```
+    - Install Grafana following the official documentation instructions.
+    - Configure Grafana and ensure it is running.
 
-3. **Configuration de la source de données Grafana pour Strapi**
-   - Dans Grafana, ajoutez une nouvelle source de données.
-   - Sélectionnez le type de source de données comme "Strapi".
-   - Configurez les paramètres de connexion avec l'URL de votre instance Strapi.
+        ```bash
+        # Start Grafana
+        sudo service grafana-server start
+        ```
 
-4. **Importation du Dashboard Grafana**
-   - Importez le tableau de bord Grafana pré-configuré fourni dans le répertoire `grafana-dashboard` de ce projet.
-   - Personnalisez les panneaux en fonction de vos besoins spécifiques.
+3. Configure Grafana Data Source for Strapi
 
-5. **Lancement de l'application**
-   - Démarrez votre application Strapi et assurez-vous que Grafana est en cours d'exécution.
+    - In Grafana, add a new data source.
+    - Select the data source type as "Strapi."
+    - Configure connection settings with the URL of your Strapi instance.
 
-   ```bash
-   # Lancement de l'application Strapi en mode développement
-   npm run develop
-   ```
+4. Import Grafana Dashboard
 
-## Utilisation
+    - Import the pre-configured Grafana dashboard provided in the grafana-dashboard directory of this project.
+    - Customize panels according to your specific needs.
 
-Accédez à Grafana et ouvrez le tableau de bord Strapi pour visualiser les métriques et les statistiques de votre application Strapi.
+**Launching the Application**
 
-## Postman
+Start your Strapi application and ensure Grafana is running.
 
-Utilisez la collection Postman fournie dans le répertoire postman-collection pour tester les différentes routes de votre application Strapi.
+```bash
+# Launch Strapi application in development mode
+npm run develop
+```
 
-## Contributions
+**Usage**
 
-Les contributions sont les bienvenues ! Si vous trouvez des problèmes ou souhaitez améliorer cette intégration, n'hésitez pas à ouvrir une issue ou à soumettre une demande de fusion.
+Access Grafana and open the Strapi dashboard to visualize metrics and statistics from your Strapi application.
 
-## Auteurs
+**Postman**
 
-- [Sacha Gaulin and Steven Guillermet ] - Développeur principal
+Use the provided Postman collection in the postman-collection directory to test different routes of your Strapi application.
 
----
+**Contributions**
+
+Contributions are welcome! If you encounter issues or want to improve this integration, feel free to open an issue or submit a pull request.
+
+**Authors**
+
+- Sacha Gaulin and Steven Guillermet - Lead Developers
