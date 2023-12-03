@@ -1,0 +1,512 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "panels": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+          },
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "fixedColor": "blue",
+                "mode": "continuous-BlPu"
+              },
+              "fieldMinMax": false,
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 0,
+            "y": 1
+          },
+          "id": 1,
+          "options": {
+            "displayMode": "lcd",
+            "minVizHeight": 0,
+            "minVizWidth": 0,
+            "namePlacement": "auto",
+            "orientation": "horizontal",
+            "reduceOptions": {
+              "calcs": [],
+              "fields": "",
+              "values": true
+            },
+            "showUnfilled": true,
+            "text": {},
+            "valueMode": "color"
+          },
+          "pluginVersion": "10.2.2",
+          "targets": [
+            {
+              "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+              },
+              "hide": false,
+              "queryText": "select name, price, quantity from Dvds",
+              "queryType": "table",
+              "rawQueryText": "select name, price, quantity from Dvds",
+              "refId": "A",
+              "timeColumns": [
+                "time",
+                "ts"
+              ]
+            }
+          ],
+          "title": "Products available",
+          "transparent": true,
+          "type": "bargauge"
+        },
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "fixedColor": "dark-purple",
+                "mode": "shades"
+              },
+              "custom": {
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              },
+              "mappings": []
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 5,
+            "x": 12,
+            "y": 1
+          },
+          "id": 7,
+          "options": {
+            "displayLabels": [
+              "percent"
+            ],
+            "legend": {
+              "calcs": [],
+              "displayMode": "hidden",
+              "placement": "right",
+              "showLegend": false,
+              "values": []
+            },
+            "pieType": "pie",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "10.2.2",
+          "targets": [
+            {
+              "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+              },
+              "queryText": "SELECT\n    dvds.artist AS artist_name,\n    COUNT(dvds.id) AS total_dvds\nFROM\n    dvds\nGROUP BY\n    dvds.artist\nORDER BY\n    total_dvds DESC;",
+              "queryType": "table",
+              "rawQueryText": "SELECT\n    dvds.artist AS artist_name,\n    COUNT(dvds.id) AS total_dvds\nFROM\n    dvds\nGROUP BY\n    dvds.artist\nORDER BY\n    total_dvds DESC;",
+              "refId": "A",
+              "timeColumns": [
+                "time",
+                "ts"
+              ]
+            }
+          ],
+          "title": "Artist available",
+          "transparent": true,
+          "type": "piechart"
+        }
+      ],
+      "title": "CD",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 3,
+      "panels": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "continuous-BlPu"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 0,
+            "y": 10
+          },
+          "id": 4,
+          "options": {
+            "displayMode": "lcd",
+            "minVizHeight": 10,
+            "minVizWidth": 0,
+            "namePlacement": "auto",
+            "orientation": "horizontal",
+            "reduceOptions": {
+              "calcs": [],
+              "fields": "",
+              "values": true
+            },
+            "showUnfilled": true,
+            "valueMode": "color"
+          },
+          "pluginVersion": "10.2.2",
+          "targets": [
+            {
+              "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+              },
+              "queryText": "select name, price, quantity from Books",
+              "queryType": "table",
+              "rawQueryText": "select name, price, quantity from Books",
+              "refId": "A",
+              "timeColumns": [
+                "time",
+                "ts"
+              ]
+            }
+          ],
+          "title": "Books available",
+          "transparent": true,
+          "type": "bargauge"
+        },
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "fixedColor": "dark-purple",
+                "mode": "shades"
+              },
+              "custom": {
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              },
+              "mappings": []
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 5,
+            "x": 12,
+            "y": 10
+          },
+          "id": 8,
+          "options": {
+            "displayLabels": [
+              "percent"
+            ],
+            "legend": {
+              "calcs": [],
+              "displayMode": "hidden",
+              "placement": "right",
+              "showLegend": false,
+              "values": []
+            },
+            "pieType": "pie",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+              },
+              "queryText": "SELECT\n    Books.name AS name,\n    COUNT(Books.id) AS total_Books\nFROM\n    Books\nGROUP BY\n    Books.name\nORDER BY\n    total_Books DESC;\n    ",
+              "queryType": "table",
+              "rawQueryText": "SELECT\n    Books.name AS name,\n    COUNT(Books.id) AS total_Books\nFROM\n    Books\nGROUP BY\n    Books.name\nORDER BY\n    total_Books DESC;\n    ",
+              "refId": "A",
+              "timeColumns": [
+                "time",
+                "ts"
+              ]
+            }
+          ],
+          "title": "Books available",
+          "transparent": true,
+          "type": "piechart"
+        }
+      ],
+      "title": "Book",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 2
+      },
+      "id": 5,
+      "panels": [
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "continuous-BlPu"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 0,
+            "y": 19
+          },
+          "id": 6,
+          "options": {
+            "displayMode": "lcd",
+            "minVizHeight": 10,
+            "minVizWidth": 0,
+            "namePlacement": "auto",
+            "orientation": "horizontal",
+            "reduceOptions": {
+              "calcs": [],
+              "fields": "",
+              "values": true
+            },
+            "showUnfilled": true,
+            "valueMode": "color"
+          },
+          "pluginVersion": "10.2.2",
+          "targets": [
+            {
+              "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+              },
+              "queryText": "select name, price, quantity from Electronics",
+              "queryType": "table",
+              "rawQueryText": "select name, price, quantity from Electronics",
+              "refId": "A",
+              "timeColumns": [
+                "time",
+                "ts"
+              ]
+            }
+          ],
+          "title": "Electronics available",
+          "transparent": true,
+          "type": "bargauge"
+        },
+        {
+          "datasource": {
+            "type": "frser-sqlite-datasource",
+            "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "fixedColor": "dark-purple",
+                "mode": "shades"
+              },
+              "custom": {
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                }
+              },
+              "mappings": []
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 5,
+            "x": 12,
+            "y": 19
+          },
+          "id": 9,
+          "options": {
+            "displayLabels": [
+              "percent"
+            ],
+            "legend": {
+              "calcs": [],
+              "displayMode": "hidden",
+              "placement": "right",
+              "showLegend": false,
+              "values": []
+            },
+            "pieType": "pie",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": {
+                "type": "frser-sqlite-datasource",
+                "uid": "b4b7623c-33c2-4fcd-bce5-2e003e09703e"
+              },
+              "queryText": "SELECT\n    Electronics.name AS name,\n    COUNT(Electronics.id) AS total_Electronics\nFROM\n    Electronics\nGROUP BY\n    Electronics.name\nORDER BY\n    total_Electronics DESC;\n    \n    ",
+              "queryType": "table",
+              "rawQueryText": "SELECT\n    Electronics.name AS name,\n    COUNT(Electronics.id) AS total_Electronics\nFROM\n    Electronics\nGROUP BY\n    Electronics.name\nORDER BY\n    total_Electronics DESC;\n    \n    ",
+              "refId": "A",
+              "timeColumns": [
+                "time",
+                "ts"
+              ]
+            }
+          ],
+          "title": "Electronics available",
+          "transparent": true,
+          "type": "piechart"
+        }
+      ],
+      "title": "Electonic",
+      "type": "row"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Dashboard",
+  "uid": "ad580f6d-2286-46f2-8a09-7b8149966273",
+  "version": 11,
+  "weekStart": ""
+}
