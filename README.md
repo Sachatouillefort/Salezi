@@ -63,5 +63,5 @@ Contributions are welcome! If you encounter issues or want to improve this integ
 
 ## Authors
 
-- Sacha Gaulin and Steven - Lead Developers
+- Sacha and Steven - Lead Developers
 ---
